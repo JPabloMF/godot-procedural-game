@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/basic-terreain-tileset.png-6fb6aa6275bd1c19aa58a4b8e4d3de1b.stex"
+path="res://.import/cat.png-ac9bdd638588658e9e4d5483e87ac256.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://basic-terreain-tileset.png"
-dest_files=[ "res://.import/basic-terreain-tileset.png-6fb6aa6275bd1c19aa58a4b8e4d3de1b.stex" ]
+source_file="res://sprites/cat.png"
+dest_files=[ "res://.import/cat.png-ac9bdd638588658e9e4d5483e87ac256.stex" ]
 
 [params]
 
