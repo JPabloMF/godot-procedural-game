@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Tilesets/Usable/TestTileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Home/platform/platform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sprites/cat.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=5]
@@ -94,7 +94,7 @@ position = Vector2( 100, 185 )
 z_index = 2
 frames = SubResource( 7 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

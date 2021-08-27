@@ -4,6 +4,7 @@ var motion = Vector2()
 var gravity = 30
 var tilemap
 var player_in_platform = false
+export(String,FILE,"*.tscn") var next_world
 
 func _ready():
 	focus_home_camera()
@@ -11,6 +12,8 @@ func _ready():
 func _physics_process(delta):
 	motion.y += gravity
 	handle_horizontal_movement()
+	if Input.is_action_just_pressed("ui_select"):
+		get_tree().change_scene(next_world)
 	
 	motion = move_and_slide(motion,Vector2.UP,true,4,PI/4,false)
 
@@ -35,7 +38,8 @@ func handle_horizontal_movement():
 		$AnimatedPlayer.play("idle")
 
 func is_platform_moving():
-	return get_parent().get_node("platform").get_node("AnimationPlayer").is_playing()
+	if get_parent().get_node("platform"):
+		return get_parent().get_node("platform").get_node("AnimationPlayer").is_playing()
 
 func _on_Player_area_entered(area):
 	if "Platform" in area.get_name():

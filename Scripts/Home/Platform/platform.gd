@@ -26,6 +26,9 @@ func handle_platform_movement():
 		if Input.is_action_just_pressed("ui_up") and player_in_platform:
 				$AnimationPlayer.play("3-2")
 				current_floor = 2
+	if current_floor == 3 and $AnimationPlayer.is_playing() == false:
+		if Input.is_action_just_pressed("ui_down") and player_in_platform:
+				print('generate world')
 
 func _physics_process(delta):
 	handle_platform_movement()

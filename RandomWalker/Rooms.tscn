@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesets/Usable/TestTileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://RandomWalker/Rooms.gd" type="Script" id=3]
+
+[node name="Rooms" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Side" type="Node2D" parent="."]
+visible = false
+
+[node name="0" type="TileMap" parent="Side"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 2, 0, 65536, 7, 0, 65547, 3, 0, 131072, 7, 0, 131083, 3, 0, 196608, 7, 0, 196619, 3, 0, 262144, 7, 0, 262155, 3, 0, 327680, 7, 0, 327691, 3, 0, 393216, 6, 0, 393217, 5, 0, 393218, 5, 0, 393219, 5, 0, 393220, 5, 0, 393221, 0, 0, 393222, 0, 0, 393226, 5, 0, 393227, 4, 0 )
+
+[node name="1" type="TileMap" parent="Side"]
+visible = false
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 2, 0, 65536, 7, 0, 131072, 7, 0, 196608, 7, 0, 196615, 5, 0, 196616, 5, 0, 262144, 7, 0, 262149, 5, 0, 262150, 5, 0, 262151, 9, 0, 262152, 9, 0, 262153, 5, 0, 262154, 5, 0, 327680, 7, 0, 327683, 5, 0, 327684, 5, 0, 327685, 9, 0, 327686, 9, 0, 327687, 9, 0, 327688, 9, 0, 327689, 9, 0, 327690, 9, 0, 327691, 5, 0, 393216, 6, 0, 393217, 5, 0, 393218, 5, 0, 393219, 5, 0, 393220, 5, 0, 393221, 5, 0, 393222, 5, 0, 393223, 5, 0, 393224, 5, 0, 393225, 5, 0, 393226, 5, 0, 393227, 4, 0 )
+
+[node name="LR" type="Node2D" parent="."]
+visible = false
+
+[node name="0" type="TileMap" parent="LR"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 9, 0, 7, 9, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 393216, 9, 0, 393217, 9, 0, 393218, 5, 0, 393219, 5, 0, 393220, 5, 0, 393221, 5, 0, 393222, 5, 0, 393223, 5, 0, 393224, 5, 0, 393225, 5, 0, 393226, 9, 0, 393227, 9, 0 )
+
+[node name="Player" parent="LR/0" instance=ExtResource( 2 )]
+position = Vector2( 80, 96 )
+
+[node name="LRB" type="Node2D" parent="."]
+visible = false
+
+[node name="0" type="TileMap" parent="LRB"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 393216, 5, 0, 393217, 5, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 9, 0, 393227, 9, 0 )
+
+[node name="LRT" type="Node2D" parent="."]
+visible = false
+
+[node name="0" type="TileMap" parent="LRT"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 1, 0, 11, 1, 0, 393216, 9, 0, 393217, 9, 0, 393218, 5, 0, 393219, 5, 0, 393220, 5, 0, 393221, 5, 0, 393222, 5, 0, 393223, 5, 0, 393224, 5, 0, 393225, 5, 0, 393226, 9, 0, 393227, 9, 0 )
+
+[node name="LRTB" type="Node2D" parent="."]
+visible = false
+
+[node name="0" type="TileMap" parent="LRTB"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 8, 0, 1, 8, 0, 2, 1, 0, 3, 1, 0, 4, 0, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 393216, 8, 0, 393217, 8, 0, 393218, 5, 0, 393219, 5, 0, 393220, 0, 0, 393223, 8, 0, 393224, 8, 0, 393225, 8, 0, 393226, 8, 0, 393227, 8, 0 )
